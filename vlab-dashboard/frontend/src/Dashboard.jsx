@@ -57,17 +57,17 @@ function MonthlyChart({ rows, allRows, metric }) {
 
   const max = Math.max(1, ...Object.values(values));
   const width = Math.max(720, months.length * 88);
-  const height = 300;
-  const left = 34;
-  const bottom = 62;
-  const top = 40;
+  const height = 360;
+  const left = 42;
+  const bottom = 76;
+  const top = 48;
   const slot = (width - left * 2) / months.length;
   const barWidth = Math.min(48, slot * 0.56);
   const color = metric === 'users' ? '#6478d7' : '#4c9e91';
 
   return (
     <div className="chart-scroll">
-      <svg className="chart" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Monthly ${metric === 'users' ? 'student count' : 'lab usage'}`}>
+      <svg className="chart" style={{ width: `${width}px` }} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`Monthly ${metric === 'users' ? 'student count' : 'lab usage'}`}>
         {[0.25, 0.5, 0.75, 1].map((fraction) => {
           const y = height - bottom - (height - top - bottom) * fraction;
           return <line key={fraction} x1={left} x2={width - left} y1={y} y2={y} className="chart-grid" />;
@@ -86,8 +86,8 @@ function MonthlyChart({ rows, allRows, metric }) {
                 </>
               )}
               {!value && <line x1={x - 11} x2={x + 11} y1={height - bottom} y2={height - bottom} className="chart-empty" />}
-              <text className="chart-label" x={x} y={height - bottom + 22} textAnchor="middle">{MONTHS[Number(labelMonth) - 1]}</text>
-              <text className="chart-year" x={x} y={height - bottom + 43} textAnchor="middle">{reported.has(key) ? labelYear : '—'}</text>
+              <text className="chart-label" x={x} y={height - bottom + 25} textAnchor="middle">{MONTHS[Number(labelMonth) - 1]}</text>
+              <text className="chart-year" x={x} y={height - bottom + 49} textAnchor="middle">{reported.has(key) ? labelYear : '—'}</text>
             </g>
           );
         })}

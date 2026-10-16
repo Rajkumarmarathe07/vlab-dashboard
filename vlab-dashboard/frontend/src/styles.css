@@ -67,7 +67,7 @@ h2 { display: flex; align-items: center; gap: 9px; margin: 0; color: #394153; fo
 .stat-card > strong { display: block; margin-bottom: 5px; color: #363e50; font-size: 34px; line-height: 1.1; font-weight: 800; letter-spacing: -.045em; }
 .stat-card > strong.stat-month { font-size: 28px; }
 .stat-card > small { color: #7c8799; font-size: 12px; }
-.content-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(290px, 1fr); align-items: stretch; gap: 18px; margin-bottom: 19px; }
+.content-grid { display: grid; grid-template-columns: minmax(0, 1fr); align-items: stretch; gap: 18px; margin-bottom: 19px; }
 .card { min-width: 0; padding: 20px; }
 .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
 .section-heading .eyebrow { margin-bottom: 4px; font-size: 11px; }
@@ -75,7 +75,7 @@ h2 { display: flex; align-items: center; gap: 9px; margin: 0; color: #394153; fo
 .segmented button { min-height: 34px; padding: 0 13px; border: 0; border-radius: 6px; color: #737d90; background: transparent; cursor: pointer; font-size: 12px; font-weight: 700; }
 .segmented button.selected { color: #5368c6; background: var(--surface); box-shadow: var(--soft-shadow-small); }
 .chart-scroll { width: 100%; overflow-x: auto; }
-.chart { display: block; width: 100%; min-width: 760px; overflow: visible; }
+.chart { display: block; min-width: 720px; height: 360px; overflow: visible; }
 .chart-grid { stroke: #dfe3ec; stroke-width: 1; }
 .chart-value { fill: #596579; font-size: 14px; font-weight: 700; }
 .chart-label, .chart-year { fill: #69758a; font-family: 'DM Sans', sans-serif; font-size: 14px; }
@@ -87,7 +87,7 @@ h2 { display: flex; align-items: center; gap: 9px; margin: 0; color: #394153; fo
 .department-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; color: #657186; font-size: 13px; line-height: 1.5; }
 .department-meta span { max-width: 80%; }
 .department-meta strong { color: #485164; font-size: 14px; }
-.progress-track { height: 9px; overflow: hidden; border-radius: 10px; background: var(--surface); box-shadow: var(--soft-inset); }
+.progress-track { height: 14px; overflow: hidden; border-radius: 10px; background: var(--surface); box-shadow: var(--soft-inset); }
 .progress-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #6579d7, #98a6e8); animation: grow .7s ease both; }
 @keyframes grow { from { width: 0; } }
 .empty-state { margin: 25px 0; color: #737f92; text-align: center; font-size: 14px; }

@@ -1,0 +1,7 @@
+vlab.db
+.env
+__pycache__/
+.venv/
+*.pyc
+frontend/node_modules/
+static/build/

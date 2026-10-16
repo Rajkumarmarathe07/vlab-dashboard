@@ -1,0 +1,9 @@
+.env
+.env.*
+.venv/
+__pycache__/
+*.py[cod]
+*.db
+.git/
+frontend/node_modules/
+static/build/

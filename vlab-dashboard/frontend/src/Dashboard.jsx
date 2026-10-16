@@ -56,13 +56,13 @@ function MonthlyChart({ rows, allRows, metric }) {
   });
 
   const max = Math.max(1, ...Object.values(values));
-  const width = Math.max(720, months.length * 88);
-  const height = 360;
-  const left = 42;
-  const bottom = 76;
-  const top = 48;
+  const width = Math.max(760, months.length * 76);
+  const height = 300;
+  const left = 36;
+  const bottom = 66;
+  const top = 40;
   const slot = (width - left * 2) / months.length;
-  const barWidth = Math.min(48, slot * 0.56);
+  const barWidth = Math.min(42, slot * 0.54);
   const color = metric === 'users' ? '#6478d7' : '#4c9e91';
 
   return (
@@ -85,9 +85,9 @@ function MonthlyChart({ rows, allRows, metric }) {
                   <text className="chart-value" x={x} y={height - bottom - barHeight - 8} textAnchor="middle">{format(value)}</text>
                 </>
               )}
-              {!value && <line x1={x - 11} x2={x + 11} y1={height - bottom} y2={height - bottom} className="chart-empty" />}
-              <text className="chart-label" x={x} y={height - bottom + 25} textAnchor="middle">{MONTHS[Number(labelMonth) - 1]}</text>
-              <text className="chart-year" x={x} y={height - bottom + 49} textAnchor="middle">{reported.has(key) ? labelYear : '—'}</text>
+              {!value && <line x1={x - 10} x2={x + 10} y1={height - bottom} y2={height - bottom} className="chart-empty" />}
+              <text className="chart-label" x={x} y={height - bottom + 21} textAnchor="middle">{MONTHS[Number(labelMonth) - 1]}</text>
+              <text className="chart-year" x={x} y={height - bottom + 42} textAnchor="middle">{reported.has(key) ? labelYear : '—'}</text>
             </g>
           );
         })}
